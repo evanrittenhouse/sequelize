@@ -309,6 +309,20 @@ describe(Support.getTestDialectTeaser('QueryInterface'), () => {
     });
   }
 
+  describe('test', () => {
+    it('EVAN MOVE THIS', async function () {
+      await this.queryInterface.createTable('companies', { name: DataTypes.STRING });
+      const companies = await this.queryInterface.bulkInsert('companies', [
+        { name: 'Example Company 1' },
+        { name: 'Example Company 2' },
+      ]);
+
+      console.log(companies);
+
+      expect(companies).to.be.eq([1, 2]);
+    });
+  });
+
   describe('addColumn', () => {
     beforeEach(async function () {
       await this.sequelize.createSchema('archive');
