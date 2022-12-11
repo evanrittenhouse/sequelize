@@ -13,6 +13,7 @@ import { injectReplacements, mapBindParameters } from './utils/sql';
 import { useInflection } from './utils/string';
 import { parseConnectionString } from './utils/url';
 import { importModels } from './import-models.js';
+import { QueryInterface } from '.';
 
 const _ = require('lodash');
 const { Model } = require('./model');
@@ -1280,7 +1281,7 @@ Sequelize.prototype.Validator = Sequelize.Validator = Validator;
 
 Sequelize.Model = Model;
 
-Sequelize.QueryInterface = AbstractQueryInterface;
+Sequelize.QueryInterface = QueryInterface;
 Sequelize.BelongsTo = BelongsTo;
 Sequelize.HasOne = HasOne;
 Sequelize.HasMany = HasMany;

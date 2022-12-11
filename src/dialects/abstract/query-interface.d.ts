@@ -20,6 +20,8 @@ import type { TableNameOrModel } from './query-generator-typescript';
 import type { AbstractQueryGenerator, AddColumnQueryOptions, RemoveColumnQueryOptions } from './query-generator.js';
 import { AbstractQueryInterfaceTypeScript } from './query-interface-typescript';
 
+export * from './query-interface.types';
+
 interface Replaceable {
   /**
    * Only named replacements are allowed in query interface methods.
